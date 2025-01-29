@@ -1,0 +1,113 @@
+.firstSec {
+  display: flex;
+  width: 100%;
+  height: 80.2vh;
+  justify-content: space-between;
+  flex-direction: row;
+  padding-inline: 10rem;
+  color: #FFF;
+  
+  background: linear-gradient(rgba(0, 0, 0, 0.713), rgba(0,0,0,0.713)),
+    url('../public/kid.jpg');
+  background-repeat: no-repeat;
+  background-position: fixed;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.topGroup {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.textsTop {
+  margin-bottom: 10rem;
+}
+
+.textsTop > h1 {
+  margin-bottom: 4rem;
+}
+
+.firstSecImg {
+  display: flex;
+
+  align-items: center;
+  justify-content: center
+}
+
+.firstSecImg img {
+  width: 340px;
+  height: 350px;
+  border-radius: 6px;
+}
+
+.textsTop > p {
+  width: 40%;
+  font-size: 19px;
+}
+
+.colabs {
+  display: flex;
+  color: #FFF;
+  font-weight: bold;
+  background-color: #554133;
+  justify-content: space-around;
+  align-items: center;
+  height: 8rem;
+}
+
+/* METODOLOGIA DE ENSINO  */
+
+.metodologiaDeEnsino {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  height: auto;
+  padding-top: 6rem;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.713), rgba(0,0,0,0.713)),
+   url('/kid_learning.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #FFF;
+  padding-inline: 8rem;
+}
+
+/* 
+.title {
+
+} */
+
+.title {
+  display: flex; 
+  width: 100%;
+  justify-content: center;
+
+}
+
+.desc1 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 6rem;
+  margin-bottom: 4rem;
+
+  gap: 20px;
+}
+
+.desc1 > p {
+  width: 50%;
+  font-size: 22px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 4rem;
+
+  margin-top: 5rem;
+}
