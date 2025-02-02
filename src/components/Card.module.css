@@ -9,6 +9,7 @@
   width: 600px;
   height: 300px;
   font-size: 18px;
+  text-align: justify;
 }
 
 .cardTitle {
@@ -21,4 +22,5 @@
   height: 100%;
   display: flex;
   align-items: center;
+  font-size: 20px;
 }

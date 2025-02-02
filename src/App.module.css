@@ -1,34 +1,61 @@
 .firstSec {
   display: flex;
   width: 100%;
-  height: 80.2vh;
-  justify-content: space-between;
-  flex-direction: row;
-  padding-inline: 10rem;
+  height: 100vh;
+  justify-content: center;
+  flex-direction: column;
   color: #FFF;
   
-  background: linear-gradient(rgba(0, 0, 0, 0.713), rgba(0,0,0,0.713)),
-    url('../public/kid.jpg');
-  background-repeat: no-repeat;
-  background-position: fixed;
+  background: url('../public/fundo.png');
   background-size: cover;
-  background-attachment: fixed;
+  
 }
 
 .topGroup {
   display: flex;
   height: 100%;
+  width: 100%;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
 .textsTop {
-  margin-bottom: 10rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .textsTop > h1 {
-  margin-bottom: 4rem;
+  font-size: 46px;
+  margin-bottom: 5rem;
+}
+
+.buttonDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 5rem;
+}
+
+.buttonDiv button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 6px;
+  outline: none;
+  border: 1px solid #554133;
+  background-color: #554133;
+  font-size: 17px;
+  cursor: pointer;
+  color: #FFF;
+}
+
+.buttonDiv button:hover {
+  transition: .1s;
+  background-color: #5c4f46;
 }
 
 .firstSecImg {
@@ -49,16 +76,6 @@
   font-size: 19px;
 }
 
-.colabs {
-  display: flex;
-  color: #FFF;
-  font-weight: bold;
-  background-color: #554133;
-  justify-content: space-around;
-  align-items: center;
-  height: 8rem;
-}
-
 /* METODOLOGIA DE ENSINO  */
 
 .metodologiaDeEnsino {
@@ -70,24 +87,37 @@
   justify-content: center;
   align-items: center;
 
-  background: linear-gradient(rgba(0, 0, 0, 0.713), rgba(0,0,0,0.713)),
-   url('/kid_learning.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #e1dddd;
+  /* background-color: #f2cda0; */
   color: #FFF;
   padding-inline: 8rem;
+  padding-bottom: 5rem;
 }
 
-/* 
-.title {
+.metodologiaDesc {
+  display: flex;
+  flex-direction: row;
+}
 
-} */
+.metodologiaIMG {
+  display: flex;
+}
+
+.metodologiaDesc img {
+  display: flex;
+  width: 600px;
+  align-self: center;
+  border-radius: 6px;
+}
 
 .title {
   display: flex; 
   width: 100%;
   justify-content: center;
+}
 
+.title > h1 {
+  font-size: 46px;
 }
 
 .desc1 {
@@ -95,12 +125,17 @@
   flex-direction: column;
   margin-top: 6rem;
   margin-bottom: 4rem;
-
   gap: 20px;
+
+}
+
+.desc1 > h3 {
+  font-size: 22px;
 }
 
 .desc1 > p {
-  width: 50%;
+  width: 70%;
+  text-align: justify;
   font-size: 22px;
 }
 
@@ -110,4 +145,72 @@
   gap: 4rem;
 
   margin-top: 5rem;
+}
+
+/* childrenPogress */
+
+.childrenPogress {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f2cba3;
+  height: 125vh;
+}
+
+.childrenPogressContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10rem;
+  justify-content: space-around;
+}
+
+.childrenProgressTitle {
+  margin-top: 4rem;
+}
+
+.childrenProgressTitle > h1 {
+  font-size: 40px;
+}
+
+
+
+.childrenProgressText {
+  display: flex;
+  width: 40%;
+  font-size: 22px;
+  text-align: justify;
+  justify-content: flex-end;
+  font-weight: 600;
+}
+
+.childrenProgressImg img {
+  width: 600px;
+  border-radius: 6px;
+}
+
+.vantagens {
+  margin-top: 6rem
+}
+
+.vantagensTitle {
+  display: flex;
+  justify-content: center;
+  padding-block: 2rem;
+}
+
+.checkboxContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.chekboxs {
+  display: flex;
+  width: 100%;
+}
+
+.chekboxs > p {
+  font-size: 18px;
+  width: 100%;
+  padding: 5px;
 }
