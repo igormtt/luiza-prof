@@ -2,6 +2,7 @@
 import Header from "./components/Header";
 import styles from "./App.module.css";
 import Card from "./components/Card";
+import { FcCheckmark } from "react-icons/fc";
 
 export default function App() {
   return (
@@ -58,7 +59,7 @@ export default function App() {
           </div>
 
           <div className={styles.metodologiaIMG}>
-            <img src="/kid.jpg" alt="Criança estudando" />
+            <img src="/kid2.png" alt="Criança estudando" />  
           </div>
         </div>
 
@@ -108,41 +109,41 @@ export default function App() {
 
           <div className={styles.checkboxContainer}>
             <div className={styles.chekboxs}>
-              <input type="checkbox"  checked={true} name="" id="" />
+            <FcCheckmark className={styles.list} />
               <p> Aulas Personalizadas: Cada aula é feita sob medida para o ritmo e as necessidades do aluno.</p>
             </div>
             <div className={styles.chekboxs}>
-              <input type="checkbox" checked={true} name="" id="" />
+            <FcCheckmark className={styles.list} />
                 <p>Metodologia Interativa: Uso de jogos, músicas e histórias para tornar o aprendizado divertido.</p>
             </div>
             
             <div className={styles.chekboxs}>
-              <input type="checkbox" checked={true} name="" id="" />
+            <FcCheckmark className={styles.list} />
               <p>Desenvolvimento de Habilidades: Ensino inglês e também promove autonomia, confiança e pensamento crítico.</p>
             </div>
 
             <div className={styles.chekboxs}>
-              <input type="checkbox" checked={true} name="" id="" />
+            <FcCheckmark className={styles.list} />
               <p>Experiência e Empatia: Com anos de experiência em educação, sei como adaptar meu ensino para atender diferentes necessidades, sempre com paciência e cuidado.</p>
             </div>
 
             <div className={styles.chekboxs}>
-              <input type="checkbox" checked={true} name="" id="" />
+            <FcCheckmark className={styles.list} />
               <p>Flexibilidade de Modalidades: Ofereço aulas online ou presenciais no conforto do lar.</p>
             </div>
 
             <div className={styles.chekboxs}>
-              <input type="checkbox" checked={true} name="" id="" />
+            <FcCheckmark className={styles.list} />
               <p>Ambiente Virtual: Arquivo de interação e registro dos conteúdos e recursos utilizados durante as aulas onlines. Livre acesso aos alunos e responsáveis. </p>
             </div>
 
             <div className={styles.chekboxs}>
-              <input type="checkbox" checked={true} name="" id="" />
+            <FcCheckmark className={styles.list} />
               <p>Canal de Suporte: Comunicação rápida e eficaz via WhatsApp para esclarecer dúvidas e tratar de qualquer outro assunto relacionado ao aprendizado.</p>
             </div>
             
             <div className={styles.chekboxs}>
-              <input type="checkbox" checked={true} name="" id="" />
+            <FcCheckmark className={styles.list} />
               <p>Avaliação de Progresso Trimestral: Acompanhe a evolução do seu filho em leitura, escrita, compreensão e outras habilidades essenciais</p>
             </div>
           </div>

@@ -99,15 +99,19 @@
   flex-direction: row;
 }
 
+.metodologiaDeEnsino h1, .metodologiaDeEnsino p {
+  /* color: #484848; */
+  color: #2c221a;
+}
+
 .metodologiaIMG {
   display: flex;
 }
 
 .metodologiaDesc img {
   display: flex;
-  width: 600px;
+  width: 900px;
   align-self: center;
-  border-radius: 6px;
 }
 
 .title {
@@ -206,7 +210,13 @@
 
 .chekboxs {
   display: flex;
+  align-items: center;
   width: 100%;
+  font-size: 22px;
+}
+
+.list {
+  font-size: 42px;
 }
 
 .chekboxs > p {
