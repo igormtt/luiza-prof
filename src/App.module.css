@@ -157,7 +157,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #f2cba3;
+  background-color: #e6e6e6;
   height: 125vh;
 }
 
@@ -168,6 +168,10 @@
   justify-content: space-around;
 }
 
+.childrenPogress h1, .childrenPogress h2 {
+  color: #3e3e3e;
+}
+
 .childrenProgressTitle {
   margin-top: 4rem;
 }
@@ -175,8 +179,6 @@
 .childrenProgressTitle > h1 {
   font-size: 40px;
 }
-
-
 
 .childrenProgressText {
   display: flex;
@@ -224,3 +226,4 @@
   width: 100%;
   padding: 5px;
 }
+

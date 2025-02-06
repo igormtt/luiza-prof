@@ -78,6 +78,7 @@ export default function App() {
       </div>
 
       {/** Aacompanhe o progresso do seu filho **/}
+      
       <div className={styles.childrenPogress}>
         <div className={styles.childrenProgressTitle}>
           <h1>Acompanhe o Progresso do Seu Filho</h1>
