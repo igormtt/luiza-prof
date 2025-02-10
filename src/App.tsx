@@ -10,20 +10,7 @@ export default function App() {
       <Header />
 
       <div className={styles.firstSec}>
-        <div className={styles.topGroup}>
-          <div className={styles.textsTop}>
-            <h1>Seu filho no centro do aprendizado</h1>
-
-            <h2>
-              Ensino personalizado que desenvolve autonomia, pensamento crítico
-              e autoconfiança
-            </h2>
-
-            <div className={styles.buttonDiv}>
-              <button>Conheça nossa metodologia de ensino</button>
-            </div>
-          </div>
-        </div>
+        
       </div>
 
       {/* METODOLOGIA DE ENSINO */}

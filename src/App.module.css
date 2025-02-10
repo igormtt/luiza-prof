@@ -6,74 +6,9 @@
   flex-direction: column;
   color: #FFF;
   
-  background: url('../public/fundo.png');
+  background: url('../public/new-background.jpg');
   background-size: cover;
   
-}
-
-.topGroup {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.textsTop {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.textsTop > h1 {
-  font-size: 46px;
-  margin-bottom: 5rem;
-}
-
-.buttonDiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  margin-top: 5rem;
-}
-
-.buttonDiv button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  border-radius: 6px;
-  outline: none;
-  border: 1px solid #554133;
-  background-color: #554133;
-  font-size: 17px;
-  cursor: pointer;
-  color: #FFF;
-}
-
-.buttonDiv button:hover {
-  transition: .1s;
-  background-color: #5c4f46;
-}
-
-.firstSecImg {
-  display: flex;
-
-  align-items: center;
-  justify-content: center
-}
-
-.firstSecImg img {
-  width: 340px;
-  height: 350px;
-  border-radius: 6px;
-}
-
-.textsTop > p {
-  width: 40%;
-  font-size: 19px;
 }
 
 /* METODOLOGIA DE ENSINO  */
@@ -227,3 +162,18 @@
   padding: 5px;
 }
 
+@media (max-width: 1700px) {
+  .metodologiaDeEnsino {
+
+  }
+
+  .metodologiaDesc img {
+    width: 600px;
+  }
+
+  .desc1 p{
+    width: 90%;
+  }
+  
+
+}
