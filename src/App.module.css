@@ -163,8 +163,21 @@
 }
 
 @media (max-width: 1700px) {
-  .metodologiaDeEnsino {
+  .metodologiaDesc img {
+    width: 600px;
+  }
 
+  .desc1 p{
+    width: 90%;
+  }
+  
+
+}
+
+@media (max-width: 1280px) {
+
+  .metodologiaDeEnsino {
+    padding-inline: 3rem;
   }
 
   .metodologiaDesc img {
@@ -172,6 +185,7 @@
   }
 
   .desc1 p{
+    font-size: 1.1rem;
     width: 90%;
   }
   
