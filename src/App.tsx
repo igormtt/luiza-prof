@@ -3,15 +3,26 @@ import Header from "./components/Header";
 import styles from "./App.module.css";
 import Card from "./components/Card";
 import { FcCheckmark } from "react-icons/fc";
+import {
+  ChakraProvider,
+  FormControl,
+  FormLabel,
+  Input,
+} from "@chakra-ui/react";
+import { LuClipboardList } from "react-icons/lu";
+import { FormEvent } from "react";
 
 export default function App() {
+
+  function sendMessage(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+  }
+
   return (
     <>
       <Header />
 
-      <div className={styles.firstSec}>
-        
-      </div>
+      <div className={styles.firstSec}></div>
 
       {/* METODOLOGIA DE ENSINO */}
 
@@ -46,7 +57,7 @@ export default function App() {
           </div>
 
           <div className={styles.metodologiaIMG}>
-            <img src="/kid2.png" alt="Criança estudando" />  
+            <img src="/kid2.png" alt="Criança estudando" />
           </div>
         </div>
 
@@ -65,7 +76,7 @@ export default function App() {
       </div>
 
       {/** Aacompanhe o progresso do seu filho **/}
-      
+
       <div className={styles.childrenPogress}>
         <div className={styles.childrenProgressTitle}>
           <h1>Acompanhe o Progresso do Seu Filho</h1>
@@ -97,47 +108,121 @@ export default function App() {
 
           <div className={styles.checkboxContainer}>
             <div className={styles.chekboxs}>
-            <FcCheckmark className={styles.list} />
-              <p> Aulas Personalizadas: Cada aula é feita sob medida para o ritmo e as necessidades do aluno.</p>
+              <FcCheckmark className={styles.list} />
+              <p>
+                {" "}
+                Aulas Personalizadas: Cada aula é feita sob medida para o ritmo
+                e as necessidades do aluno.
+              </p>
             </div>
             <div className={styles.chekboxs}>
-            <FcCheckmark className={styles.list} />
-                <p>Metodologia Interativa: Uso de jogos, músicas e histórias para tornar o aprendizado divertido.</p>
-            </div>
-            
-            <div className={styles.chekboxs}>
-            <FcCheckmark className={styles.list} />
-              <p>Desenvolvimento de Habilidades: Ensino inglês e também promove autonomia, confiança e pensamento crítico.</p>
-            </div>
-
-            <div className={styles.chekboxs}>
-            <FcCheckmark className={styles.list} />
-              <p>Experiência e Empatia: Com anos de experiência em educação, sei como adaptar meu ensino para atender diferentes necessidades, sempre com paciência e cuidado.</p>
+              <FcCheckmark className={styles.list} />
+              <p>
+                Metodologia Interativa: Uso de jogos, músicas e histórias para
+                tornar o aprendizado divertido.
+              </p>
             </div>
 
             <div className={styles.chekboxs}>
-            <FcCheckmark className={styles.list} />
-              <p>Flexibilidade de Modalidades: Ofereço aulas online ou presenciais no conforto do lar.</p>
+              <FcCheckmark className={styles.list} />
+              <p>
+                Desenvolvimento de Habilidades: Ensino inglês e também promove
+                autonomia, confiança e pensamento crítico.
+              </p>
             </div>
 
             <div className={styles.chekboxs}>
-            <FcCheckmark className={styles.list} />
-              <p>Ambiente Virtual: Arquivo de interação e registro dos conteúdos e recursos utilizados durante as aulas onlines. Livre acesso aos alunos e responsáveis. </p>
+              <FcCheckmark className={styles.list} />
+              <p>
+                Experiência e Empatia: Com anos de experiência em educação, sei
+                como adaptar meu ensino para atender diferentes necessidades,
+                sempre com paciência e cuidado.
+              </p>
             </div>
 
             <div className={styles.chekboxs}>
-            <FcCheckmark className={styles.list} />
-              <p>Canal de Suporte: Comunicação rápida e eficaz via WhatsApp para esclarecer dúvidas e tratar de qualquer outro assunto relacionado ao aprendizado.</p>
+              <FcCheckmark className={styles.list} />
+              <p>
+                Flexibilidade de Modalidades: Ofereço aulas online ou
+                presenciais no conforto do lar.
+              </p>
             </div>
-            
+
             <div className={styles.chekboxs}>
-            <FcCheckmark className={styles.list} />
-              <p>Avaliação de Progresso Trimestral: Acompanhe a evolução do seu filho em leitura, escrita, compreensão e outras habilidades essenciais</p>
+              <FcCheckmark className={styles.list} />
+              <p>
+                Ambiente Virtual: Arquivo de interação e registro dos conteúdos
+                e recursos utilizados durante as aulas onlines. Livre acesso aos
+                alunos e responsáveis.{" "}
+              </p>
+            </div>
+
+            <div className={styles.chekboxs}>
+              <FcCheckmark className={styles.list} />
+              <p>
+                Canal de Suporte: Comunicação rápida e eficaz via WhatsApp para
+                esclarecer dúvidas e tratar de qualquer outro assunto
+                relacionado ao aprendizado.
+              </p>
+            </div>
+
+            <div className={styles.chekboxs}>
+              <FcCheckmark className={styles.list} />
+              <p>
+                Avaliação de Progresso Trimestral: Acompanhe a evolução do seu
+                filho em leitura, escrita, compreensão e outras habilidades
+                essenciais
+              </p>
             </div>
           </div>
         </div>
-
       </div>
+
+      {/* QUEM SOU EU  */}
+
+      <div className={styles.quemSouEu}>
+        <div className={styles.quemSouEuTitle}>
+          <h1>Quem sou eu?</h1>
+        </div>
+
+        <div className={styles.quemSouEuContent}>
+          <h1>CONTEUDO </h1>
+        </div>
+      </div>
+
+      {/* FORMULARIO PARA CONTATO */}
+
+      <ChakraProvider resetCSS={false}>
+        <div className={styles.contactForm}>
+          <div className={styles.formTitle}>
+            <h1>Entre em contato!</h1>
+          </div>
+
+          <form onSubmit={sendMessage} className={styles.formControl}>
+            <div className={styles.form}>
+              <FormControl border="gray">
+                <FormLabel>Email:</FormLabel>
+                <Input type="email" />
+
+                <FormControl  border="gray">
+                  <FormLabel>Nome:</FormLabel>
+                  <Input type="nome" />
+                </FormControl>
+
+                <FormControl  border="gray">
+                  <FormLabel>Mensagem:</FormLabel>
+                  <Input type="mensagem" />
+                </FormControl>
+
+                <button className={styles.formBtn}>
+                  Enviar
+                  <LuClipboardList stroke="#FFFFFF" />
+                </button>
+              </FormControl>
+            </div>
+          </form>
+        </div>
+      </ChakraProvider>
     </>
   );
 }
