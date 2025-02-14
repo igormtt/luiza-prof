@@ -246,3 +246,9 @@
     width: 90%;
   }
 }
+
+@media (max-width: 1115px) {
+  .cards {
+    flex-direction: column;
+  }
+}
