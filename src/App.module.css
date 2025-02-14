@@ -8,6 +8,7 @@
 
   background: url("../public/new-background.jpg");
   background-size: cover;
+  background-attachment: fixed;
 }
 
 /* METODOLOGIA DE ENSINO  */
@@ -92,7 +93,7 @@
   align-items: center;
   flex-direction: column;
   background-color: #e6e6e6;
-  height: 125vh;
+  height: auto;
 }
 
 .childrenPogressContainer {
@@ -143,6 +144,7 @@
   display: flex;
   width: 100%;
   flex-direction: column;
+  margin-bottom: 4rem;
 }
 
 .chekboxs {
