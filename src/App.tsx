@@ -57,7 +57,7 @@ export default function App() {
           </div>
 
           <div className={styles.metodologiaIMG}>
-            <img src="/kid2.png" alt="Criança estudando" />
+            <img src="/newcolor.png" alt="Criança estudando" />
           </div>
         </div>
 
