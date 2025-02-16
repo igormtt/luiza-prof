@@ -2,7 +2,6 @@
 import Header from "./components/Header";
 import styles from "./App.module.css";
 import Card from "./components/Card";
-import { FcCheckmark } from "react-icons/fc";
 import {
   ChakraProvider,
   FormControl,
@@ -16,6 +15,8 @@ export default function App() {
   function sendMessage(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
   }
+
+  const tela = window.innerWidth;
 
   return (
     <>
@@ -107,70 +108,160 @@ export default function App() {
 
           <div className={styles.checkboxContainer}>
             <div className={styles.chekboxs}>
-              <FcCheckmark className={styles.list} />
-              <p>
+              {window.innerWidth > 800 ? (
+                <div className={styles.list}>
+                  <img src="checkbox-icon-lg.png" />
+                </div>
+              ) : (
+                <></>
+              )}
+              <p className={styles.checkTexts}>
                 {" "}
-                Aulas Personalizadas: Cada aula é feita sob medida para o ritmo
-                e as necessidades do aluno.
+                {tela <= 800
+                  ? `- Aulas Personalizadas: Cada aula é feita sob medida para o ritmo
+                e as necessidades do aluno.`
+                  : `Aulas Personalizadas: Cada aula é feita sob medida para o ritmo
+                e as necessidades do aluno.`}
               </p>
             </div>
             <div className={styles.chekboxs}>
-              <FcCheckmark className={styles.list} />
-              <p>
-                Metodologia Interativa: Uso de jogos, músicas e histórias para
-                tornar o aprendizado divertido.
+              <div className={styles.list}>
+                {window.innerWidth > 800 ? (
+                  <div className={styles.list}>
+                    <img src="checkbox-icon-lg.png" />
+                  </div>
+                ) : (
+                  <></>
+                )}
+              </div>
+              <p className={styles.checkTexts}>
+                {tela <= 800
+                  ? `- Metodologia Interativa: Uso de jogos, músicas e histórias para
+                tornar o aprendizado divertido.`
+                  : `Metodologia Interativa: Uso de jogos, músicas e histórias para
+                tornar o aprendizado divertido.`}
               </p>
             </div>
 
             <div className={styles.chekboxs}>
-              <FcCheckmark className={styles.list} />
-              <p>
-                Desenvolvimento de Habilidades: Ensino inglês e também promove
-                autonomia, confiança e pensamento crítico.
+              <div className={styles.list}>
+                {window.innerWidth > 800 ? (
+                  <div className={styles.list}>
+                    <img src="checkbox-icon-lg.png" />
+                  </div>
+                ) : (
+                  <></>
+                )}
+              </div>
+              <p className={styles.checkTexts}>
+                {tela <= 800
+                  ? `-  Desenvolvimento de Habilidades: Ensino inglês e também promove
+                autonomia, confiança e pensamento crítico.`
+                  : ` Desenvolvimento de Habilidades: Ensino inglês e também promove
+                autonomia, confiança e pensamento crítico.`}
               </p>
             </div>
 
             <div className={styles.chekboxs}>
-              <FcCheckmark className={styles.list} />
-              <p>
-                Experiência e Empatia: Com anos de experiência em educação, sei
+              <div className={styles.list}>
+                {window.innerWidth > 800 ? (
+                  <div className={styles.list}>
+                    <img src="checkbox-icon-lg.png" />
+                  </div>
+                ) : (
+                  <></>
+                )}
+              </div>
+              <p className={styles.checkTexts}>
+                {tela <= 800
+                  ? `- Experiência e Empatia: Com anos de experiência em educação, sei
                 como adaptar meu ensino para atender diferentes necessidades,
-                sempre com paciência e cuidado.
+                sempre com paciência e cuidado.`
+                  : `Experiência e Empatia: Com anos de experiência em educação, sei
+                como adaptar meu ensino para atender diferentes necessidades,
+                sempre com paciência e cuidado.`}
               </p>
             </div>
 
             <div className={styles.chekboxs}>
-              <FcCheckmark className={styles.list} />
-              <p>
-                Flexibilidade de Modalidades: Ofereço aulas online ou
-                presenciais no conforto do lar.
+              <div className={styles.list}>
+                {window.innerWidth > 800 ? (
+                  <div className={styles.list}>
+                    <img src="checkbox-icon-lg.png" />
+                  </div>
+                ) : (
+                  <></>
+                )}
+              </div>
+              <p className={styles.checkTexts}>
+                {tela <= 800
+                  ? `- Flexibilidade de Modalidades: Ofereço aulas online ou
+                presenciais no conforto do lar.`
+                  : `Flexibilidade de Modalidades: Ofereço aulas online ou
+                presenciais no conforto do lar.`}
               </p>
             </div>
 
             <div className={styles.chekboxs}>
-              <FcCheckmark className={styles.list} />
-              <p>
-                Ambiente Virtual: Arquivo de interação e registro dos conteúdos
+              <div className={styles.list}>
+                {window.innerWidth > 800 ? (
+                  <div className={styles.list}>
+                    <img src="checkbox-icon-lg.png" />
+                  </div>
+                ) : (
+                  <></>
+                )}
+              </div>
+              <p className={styles.checkTexts}>
+                {tela <= 800
+                  ? `- Ambiente Virtual: Arquivo de interação e registro dos conteúdos
                 e recursos utilizados durante as aulas onlines. Livre acesso aos
-                alunos e responsáveis.{" "}
+                alunos e responsáveis.`
+                  : `Ambiente Virtual: Arquivo de interação e registro dos conteúdos
+                e recursos utilizados durante as aulas onlines. Livre acesso aos
+                alunos e responsáveis.`}
               </p>
             </div>
 
             <div className={styles.chekboxs}>
-              <FcCheckmark className={styles.list} />
-              <p>
-                Canal de Suporte: Comunicação rápida e eficaz via WhatsApp para
+              <div className={styles.list}>
+                {window.innerWidth > 800 ? (
+                  <div className={styles.list}>
+                    <img src="checkbox-icon-lg.png" />
+                  </div>
+                ) : (
+                  <></>
+                )}
+              </div>
+              <p className={styles.checkTexts}>
+                {tela <= 800
+                  ? `- Canal de Suporte: Comunicação rápida e eficaz via WhatsApp para
                 esclarecer dúvidas e tratar de qualquer outro assunto
-                relacionado ao aprendizado.
+                relacionado ao aprendizado.`
+                  : `Canal de Suporte: Comunicação rápida e eficaz via WhatsApp para
+                esclarecer dúvidas e tratar de qualquer outro assunto
+                relacionado ao aprendizado.`}
               </p>
             </div>
 
             <div className={styles.chekboxs}>
-              <FcCheckmark className={styles.list} />
-              <p>
-                Avaliação de Progresso Trimestral: Acompanhe a evolução do seu
+              <div className={styles.list}>
+                {window.innerWidth > 800 ? (
+                  <div className={styles.list}>
+                    <img src="checkbox-icon-lg.png" />
+                  </div>
+                ) : (
+                  <></>
+                )}
+              </div>
+              <p className={styles.checkTexts}>
+                {tela <= 800
+                  ? `- Avaliação de Progresso Trimestral: Acompanhe a evolução do seu
                 filho em leitura, escrita, compreensão e outras habilidades
-                essenciais
+                essenciais`
+                  : `Avaliação de Progresso Trimestral: Acompanhe a evolução do seu
+                filho em leitura, escrita, compreensão e outras habilidades
+                essenciais`}
               </p>
             </div>
           </div>
@@ -211,16 +302,16 @@ export default function App() {
             <div className={styles.form}>
               <FormControl className="formControl" border="gray">
                 <FormLabel>Email:</FormLabel>
-                <Input focusBorderColor='#464646' type="email" />
+                <Input focusBorderColor="#464646" type="email" />
 
                 <FormControl border="gray">
                   <FormLabel>Nome:</FormLabel>
-                  <Input focusBorderColor='#464646' type="nome" />
+                  <Input focusBorderColor="#464646" type="nome" />
                 </FormControl>
 
                 <FormControl border="gray">
                   <FormLabel>Mensagem:</FormLabel>
-                  <Input focusBorderColor='#464646' type="mensagem" />
+                  <Input focusBorderColor="#464646" type="mensagem" />
                 </FormControl>
 
                 <button className={styles.formBtn}>

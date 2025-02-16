@@ -142,10 +142,11 @@
 
 .checkboxContainer {
   display: flex;
-  width: 90%;
-  text-align: left;
+  width: 65%;
+  text-align: justify;
   flex-direction: column;
   margin-bottom: 4rem;
+  gap: 20px;
 }
 
 .chekboxs {
@@ -153,10 +154,15 @@
   align-items: center;
   width: 100%;
   font-size: 22px;
+  gap: 10px;
 }
 
-.list {
-  font-size: 42px;
+.checkTexts {
+  text-align: left;
+}
+
+.list img{
+  width: 42px;
 }
 
 .chekboxs > p {
@@ -327,7 +333,40 @@
     width: 300px;
   }
 
-  .title h1, .childrenProgressTitle h1, .vantagensTitle h1, .quemSouEuTitlem h1, .formTitle h1 {
-    font-size: 2rem;
+  .title h1, .childrenProgressTitle h1, .quemSouEuTitlem h1, .formTitle h1 {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+
+  .vantagens {
+    display: flex;
+    padding-left: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .vantagensTitle h1 {
+    align-self: center;
+    text-align: center;
+    font-size: 1.7rem;
+  }
+
+  .childrenProgressTitle h1 {
+    margin-bottom: -5rem;
+  }
+
+  .list {
+    display: none;
+  }
+
+  .checkTexts {
+    text-align: center;
+    width: 100%;
+  }
+
+  .checkTexts p{
+    width: 100%;
   }
 }
