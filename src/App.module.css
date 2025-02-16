@@ -259,6 +259,11 @@
     font-size: 1.1rem;
     width: 90%;
   }
+
+  .firstSec {
+    background-image: url(/backgroundToMobile.jpg);
+  }
+
 }
 
 @media (max-width: 1200px) {
@@ -322,5 +327,7 @@
     width: 300px;
   }
 
-  
+  .title h1, .childrenProgressTitle h1, .vantagensTitle h1, .quemSouEuTitlem h1, .formTitle h1 {
+    font-size: 2rem;
+  }
 }
