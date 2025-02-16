@@ -1,4 +1,4 @@
-// import Container from "./components/Container";
+import { ReactNode, useRef } from "react";
 import Header from "./components/Header";
 import styles from "./App.module.css";
 import Card from "./components/Card";
@@ -10,6 +10,23 @@ import {
 } from "@chakra-ui/react";
 import { LuClipboardList } from "react-icons/lu";
 import { FormEvent } from "react";
+import { motion, useInView } from "framer-motion";
+
+const FadeInSection = ({ children }: { children: ReactNode }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 50 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
+      {children}
+    </motion.div>
+  );
+};
 
 export default function App() {
   function sendMessage(e: FormEvent<HTMLFormElement>) {
@@ -107,163 +124,180 @@ export default function App() {
           </div>
 
           <div className={styles.checkboxContainer}>
-            <div className={styles.chekboxs}>
-              {window.innerWidth > 800 ? (
+            <FadeInSection>
+              <div className={styles.chekboxs}>
+                {window.innerWidth > 800 ? (
+                  <div className={styles.list}>
+                    <img src="checkbox-icon-lg.png" />
+                  </div>
+                ) : (
+                  <></>
+                )}
+                <p className={styles.checkTexts}>
+                  {" "}
+                  {tela <= 800
+                    ? `- Aulas Personalizadas: Cada aula é feita sob medida para o ritmo
+                  e as necessidades do aluno.`
+                    : `Aulas Personalizadas: Cada aula é feita sob medida para o ritmo
+                  e as necessidades do aluno.`}
+                </p>
+              </div>
+            </FadeInSection>
+
+            <FadeInSection>
+              <div className={styles.chekboxs}>
                 <div className={styles.list}>
-                  <img src="checkbox-icon-lg.png" />
+                  {window.innerWidth > 800 ? (
+                    <div className={styles.list}>
+                      <img src="checkbox-icon-lg.png" />
+                    </div>
+                  ) : (
+                    <></>
+                  )}
                 </div>
-              ) : (
-                <></>
-              )}
-              <p className={styles.checkTexts}>
-                {" "}
-                {tela <= 800
-                  ? `- Aulas Personalizadas: Cada aula é feita sob medida para o ritmo
-                e as necessidades do aluno.`
-                  : `Aulas Personalizadas: Cada aula é feita sob medida para o ritmo
-                e as necessidades do aluno.`}
-              </p>
-            </div>
-            <div className={styles.chekboxs}>
-              <div className={styles.list}>
-                {window.innerWidth > 800 ? (
-                  <div className={styles.list}>
-                    <img src="checkbox-icon-lg.png" />
-                  </div>
-                ) : (
-                  <></>
-                )}
-              </div>
-              <p className={styles.checkTexts}>
-                {tela <= 800
-                  ? `- Metodologia Interativa: Uso de jogos, músicas e histórias para
+                <p className={styles.checkTexts}>
+                  {tela <= 800
+                    ? `- Metodologia Interativa: Uso de jogos, músicas e histórias para
                 tornar o aprendizado divertido.`
-                  : `Metodologia Interativa: Uso de jogos, músicas e histórias para
+                    : `Metodologia Interativa: Uso de jogos, músicas e histórias para
                 tornar o aprendizado divertido.`}
-              </p>
-            </div>
-
-            <div className={styles.chekboxs}>
-              <div className={styles.list}>
-                {window.innerWidth > 800 ? (
-                  <div className={styles.list}>
-                    <img src="checkbox-icon-lg.png" />
-                  </div>
-                ) : (
-                  <></>
-                )}
+                </p>
               </div>
-              <p className={styles.checkTexts}>
-                {tela <= 800
-                  ? `-  Desenvolvimento de Habilidades: Ensino inglês e também promove
+            </FadeInSection>
+
+            <FadeInSection>
+              <div className={styles.chekboxs}>
+                <div className={styles.list}>
+                  {window.innerWidth > 800 ? (
+                    <div className={styles.list}>
+                      <img src="checkbox-icon-lg.png" />
+                    </div>
+                  ) : (
+                    <></>
+                  )}
+                </div>
+                <p className={styles.checkTexts}>
+                  {tela <= 800
+                    ? `-  Desenvolvimento de Habilidades: Ensino inglês e também promove
                 autonomia, confiança e pensamento crítico.`
-                  : ` Desenvolvimento de Habilidades: Ensino inglês e também promove
+                    : ` Desenvolvimento de Habilidades: Ensino inglês e também promove
                 autonomia, confiança e pensamento crítico.`}
-              </p>
-            </div>
-
-            <div className={styles.chekboxs}>
-              <div className={styles.list}>
-                {window.innerWidth > 800 ? (
-                  <div className={styles.list}>
-                    <img src="checkbox-icon-lg.png" />
-                  </div>
-                ) : (
-                  <></>
-                )}
+                </p>
               </div>
-              <p className={styles.checkTexts}>
-                {tela <= 800
-                  ? `- Experiência e Empatia: Com anos de experiência em educação, sei
+            </FadeInSection>
+
+            <FadeInSection>
+              <div className={styles.chekboxs}>
+                <div className={styles.list}>
+                  {window.innerWidth > 800 ? (
+                    <div className={styles.list}>
+                      <img src="checkbox-icon-lg.png" />
+                    </div>
+                  ) : (
+                    <></>
+                  )}
+                </div>
+                <p className={styles.checkTexts}>
+                  {tela <= 800
+                    ? `- Experiência e Empatia: Com anos de experiência em educação, sei
                 como adaptar meu ensino para atender diferentes necessidades,
                 sempre com paciência e cuidado.`
-                  : `Experiência e Empatia: Com anos de experiência em educação, sei
+                    : `Experiência e Empatia: Com anos de experiência em educação, sei
                 como adaptar meu ensino para atender diferentes necessidades,
                 sempre com paciência e cuidado.`}
-              </p>
-            </div>
-
-            <div className={styles.chekboxs}>
-              <div className={styles.list}>
-                {window.innerWidth > 800 ? (
-                  <div className={styles.list}>
-                    <img src="checkbox-icon-lg.png" />
-                  </div>
-                ) : (
-                  <></>
-                )}
+                </p>
               </div>
-              <p className={styles.checkTexts}>
-                {tela <= 800
-                  ? `- Flexibilidade de Modalidades: Ofereço aulas online ou
+            </FadeInSection>
+
+            <FadeInSection>
+              <div className={styles.chekboxs}>
+                <div className={styles.list}>
+                  {window.innerWidth > 800 ? (
+                    <div className={styles.list}>
+                      <img src="checkbox-icon-lg.png" />
+                    </div>
+                  ) : (
+                    <></>
+                  )}
+                </div>
+                <p className={styles.checkTexts}>
+                  {tela <= 800
+                    ? `- Flexibilidade de Modalidades: Ofereço aulas online ou
                 presenciais no conforto do lar.`
-                  : `Flexibilidade de Modalidades: Ofereço aulas online ou
+                    : `Flexibilidade de Modalidades: Ofereço aulas online ou
                 presenciais no conforto do lar.`}
-              </p>
-            </div>
-
-            <div className={styles.chekboxs}>
-              <div className={styles.list}>
-                {window.innerWidth > 800 ? (
-                  <div className={styles.list}>
-                    <img src="checkbox-icon-lg.png" />
-                  </div>
-                ) : (
-                  <></>
-                )}
+                </p>
               </div>
-              <p className={styles.checkTexts}>
-                {tela <= 800
-                  ? `- Ambiente Virtual: Arquivo de interação e registro dos conteúdos
+            </FadeInSection>
+
+            <FadeInSection>
+              <div className={styles.chekboxs}>
+                <div className={styles.list}>
+                  {window.innerWidth > 800 ? (
+                    <div className={styles.list}>
+                      <img src="checkbox-icon-lg.png" />
+                    </div>
+                  ) : (
+                    <></>
+                  )}
+                </div>
+                <p className={styles.checkTexts}>
+                  {tela <= 800
+                    ? `- Ambiente Virtual: Arquivo de interação e registro dos conteúdos
                 e recursos utilizados durante as aulas onlines. Livre acesso aos
                 alunos e responsáveis.`
-                  : `Ambiente Virtual: Arquivo de interação e registro dos conteúdos
+                    : `Ambiente Virtual: Arquivo de interação e registro dos conteúdos
                 e recursos utilizados durante as aulas onlines. Livre acesso aos
                 alunos e responsáveis.`}
-              </p>
-            </div>
-
-            <div className={styles.chekboxs}>
-              <div className={styles.list}>
-                {window.innerWidth > 800 ? (
-                  <div className={styles.list}>
-                    <img src="checkbox-icon-lg.png" />
-                  </div>
-                ) : (
-                  <></>
-                )}
+                </p>
               </div>
-              <p className={styles.checkTexts}>
-                {tela <= 800
-                  ? `- Canal de Suporte: Comunicação rápida e eficaz via WhatsApp para
+            </FadeInSection>
+
+            <FadeInSection>
+              <div className={styles.chekboxs}>
+                <div className={styles.list}>
+                  {window.innerWidth > 800 ? (
+                    <div className={styles.list}>
+                      <img src="checkbox-icon-lg.png" />
+                    </div>
+                  ) : (
+                    <></>
+                  )}
+                </div>
+                <p className={styles.checkTexts}>
+                  {tela <= 800
+                    ? `- Canal de Suporte: Comunicação rápida e eficaz via WhatsApp para
                 esclarecer dúvidas e tratar de qualquer outro assunto
                 relacionado ao aprendizado.`
-                  : `Canal de Suporte: Comunicação rápida e eficaz via WhatsApp para
+                    : `Canal de Suporte: Comunicação rápida e eficaz via WhatsApp para
                 esclarecer dúvidas e tratar de qualquer outro assunto
                 relacionado ao aprendizado.`}
-              </p>
-            </div>
-
-            <div className={styles.chekboxs}>
-              <div className={styles.list}>
-                {window.innerWidth > 800 ? (
-                  <div className={styles.list}>
-                    <img src="checkbox-icon-lg.png" />
-                  </div>
-                ) : (
-                  <></>
-                )}
+                </p>
               </div>
-              <p className={styles.checkTexts}>
-                {tela <= 800
-                  ? `- Avaliação de Progresso Trimestral: Acompanhe a evolução do seu
+            </FadeInSection>
+
+            <FadeInSection>
+              <div className={styles.chekboxs}>
+                <div className={styles.list}>
+                  {window.innerWidth > 800 ? (
+                    <div className={styles.list}>
+                      <img src="checkbox-icon-lg.png" />
+                    </div>
+                  ) : (
+                    <></>
+                  )}
+                </div>
+                <p className={styles.checkTexts}>
+                  {tela <= 800
+                    ? `- Avaliação de Progresso Trimestral: Acompanhe a evolução do seu
                 filho em leitura, escrita, compreensão e outras habilidades
                 essenciais`
-                  : `Avaliação de Progresso Trimestral: Acompanhe a evolução do seu
+                    : `Avaliação de Progresso Trimestral: Acompanhe a evolução do seu
                 filho em leitura, escrita, compreensão e outras habilidades
                 essenciais`}
-              </p>
-            </div>
+                </p>
+              </div>
+            </FadeInSection>
           </div>
         </div>
       </div>
