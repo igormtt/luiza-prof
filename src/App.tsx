@@ -13,7 +13,6 @@ import { LuClipboardList } from "react-icons/lu";
 import { FormEvent } from "react";
 
 export default function App() {
-
   function sendMessage(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
   }
@@ -84,7 +83,7 @@ export default function App() {
 
         <div className={styles.childrenPogressContainer}>
           <div className={styles.childrenProgressImg}>
-            <img src="/kid_learning.jpg" alt="Criança americana" />
+            <img src="/childAndMother.jpg" alt="Criança americana" />
           </div>
 
           <div className={styles.childrenProgressText}>
@@ -186,7 +185,17 @@ export default function App() {
         </div>
 
         <div className={styles.quemSouEuContent}>
-          <h1>CONTEUDO </h1>
+          <p>
+            Oi! Eu sou a professora Luíza, formada em Letras - Licenciatura pela
+            PUCRS e pós-graduada em Metodologias de Ensino, também pela PUCRS.
+            Tenho quase 10 anos de experiência com alfabetização bilíngue e sou
+            apaixonada por descobrir novas formas de tornar o aprendizado mais
+            acessível e prazeroso para cada aluno. Acredito que cada criança
+            aprende de um jeito e no seu próprio tempo. Meu objetivo é criar um
+            ambiente leve e acolhedor, onde elas se sintam seguras para aprender
+            e se desenvolver com confiança. Se você busca um acompanhamento
+            personalizado e feito com carinho, estou aqui para ajudar!
+          </p>
         </div>
       </div>
 
@@ -200,18 +209,18 @@ export default function App() {
 
           <form onSubmit={sendMessage} className={styles.formControl}>
             <div className={styles.form}>
-              <FormControl border="gray">
+              <FormControl className="formControl" border="gray">
                 <FormLabel>Email:</FormLabel>
-                <Input type="email" />
+                <Input focusBorderColor='#464646' type="email" />
 
-                <FormControl  border="gray">
+                <FormControl border="gray">
                   <FormLabel>Nome:</FormLabel>
-                  <Input type="nome" />
+                  <Input focusBorderColor='#464646' type="nome" />
                 </FormControl>
 
-                <FormControl  border="gray">
+                <FormControl border="gray">
                   <FormLabel>Mensagem:</FormLabel>
-                  <Input type="mensagem" />
+                  <Input focusBorderColor='#464646' type="mensagem" />
                 </FormControl>
 
                 <button className={styles.formBtn}>

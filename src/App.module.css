@@ -6,7 +6,7 @@
   flex-direction: column;
   color: #fff;
 
-  background: url("../public/new-background.jpg");
+  background: url("/new-background.jpg");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -46,7 +46,7 @@
 
 .metodologiaDesc img {
   display: flex;
-  width: 900px;
+  width: 700px;
   align-self: center;
 }
 
@@ -122,7 +122,7 @@
   font-size: 22px;
   text-align: justify;
   justify-content: flex-end;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .childrenProgressImg img {
@@ -142,7 +142,8 @@
 
 .checkboxContainer {
   display: flex;
-  width: 100%;
+  width: 90%;
+  text-align: left;
   flex-direction: column;
   margin-bottom: 4rem;
 }
@@ -169,7 +170,7 @@
   margin-top: 4rem;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: 60vh;
 }
 
 .quemSouEuTitle {
@@ -178,20 +179,27 @@
 
 .quemSouEuContent {
   display: flex;
-  align-items: center;
-
+  margin-top: 6rem;
   justify-content: center;
   width: 100%;
   height: 100%;
 }
 
+.quemSouEuContent p {
+  width: 60%;
+  font-size: 18px;
+}
+
+.contactForm {
+  background-color: #e6e6e6;
+  padding-block: 3rem;
+}
 
 .formControl {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 4rem;
 }
 
 .formTitle {
@@ -222,6 +230,12 @@
   cursor: pointer;
 }
 
+.formBtn:hover {
+  color: #cacaca;
+  transition: .2s;
+  background-color: #1b1510;
+}
+
 @media (max-width: 1700px) {
   .metodologiaDesc img {
     width: 600px;
@@ -247,8 +261,54 @@
   }
 }
 
-@media (max-width: 1115px) {
+@media (max-width: 1200px) {
+  .metodologiaIMG img {
+    width: 500px;
+  }
+
+  .childrenProgressImg img {
+    width: 500px;
+  }
+
+  .vantagens {
+    padding-left: 4rem;
+  }
+
+}
+
+@media (max-width: 1100px) {
+  .metodologiaDesc {
+    flex-direction: column; 
+  }
+
+  .metodologiaIMG {
+    justify-content: center;
+  }
+
   .cards {
     flex-direction: column;
+  }
+
+  .childrenPogressContainer {
+    align-items: center;
+    gap: 3rem;
+    flex-direction: column-reverse;
+  }
+
+  .childrenProgressText {
+    width: 80%;
+  }
+
+  .quemSouEu {
+    height: auto;
+    margin-bottom: 3rem;
+  }
+
+  .formControl {
+    width: 80%;
+  }
+
+  .formControl {
+    margin: 0 auto;
   }
 }
