@@ -312,3 +312,15 @@
     margin: 0 auto;
   }
 }
+
+@media (max-width: 800px) {
+  .metodologiaIMG img {
+    width: 300px;
+  }
+
+  .childrenProgressImg img {
+    width: 300px;
+  }
+
+  
+}
