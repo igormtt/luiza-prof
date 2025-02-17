@@ -18,11 +18,16 @@
   font-size: 22px;
 }
 
+.cardTitle h3 {
+  color: #4D3B24;
+}
+
 .cardDescription {
   height: 100%;
   display: flex;
   align-items: center;
   font-size: 20px;
+  color: #766350;
 }
 
 @media (max-width: 800px) {

@@ -1,4 +1,4 @@
-import { ReactNode, useRef } from "react";
+import { ReactNode, useRef, useState } from "react";
 import Header from "./components/Header";
 import styles from "./App.module.css";
 import Card from "./components/Card";
@@ -9,7 +9,6 @@ import {
   Input,
 } from "@chakra-ui/react";
 import { LuClipboardList } from "react-icons/lu";
-import { FormEvent } from "react";
 import { motion, useInView } from "framer-motion";
 
 const FadeInSection = ({ children }: { children: ReactNode }) => {
@@ -29,11 +28,27 @@ const FadeInSection = ({ children }: { children: ReactNode }) => {
 };
 
 export default function App() {
-  function sendMessage(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
+
+  function sendMessage() {
+    const message = `Olá! Me chamo ${name}, vim pelo seu site e gostaria de conversar sobre as aulas!
+    \n\n
+    
+    Meu e-mail: ${email};
+    Assunto: ${mensagem}
+    
+    `;
+    const whatsappURL = `https://wa.me/555184874339?text=${encodeURIComponent(
+      message
+    )}`;
+
+    window.open(whatsappURL, "_blank");
   }
 
   const tela = window.innerWidth;
+
+  const [ name, setName ] = useState("")
+  const [ email, setEmail ] = useState("")
+  const [ mensagem, setmensagem ] = useState("")
 
   return (
     <>
@@ -336,19 +351,19 @@ export default function App() {
             <div className={styles.form}>
               <FormControl className="formControl" border="gray">
                 <FormLabel>Email:</FormLabel>
-                <Input focusBorderColor="#464646" type="email" />
+                <Input focusBorderColor="#464646" type="email" onChange={(e) => setEmail(e.target.value)} value={email}/>
 
                 <FormControl border="gray">
                   <FormLabel>Nome:</FormLabel>
-                  <Input focusBorderColor="#464646" type="nome" />
+                  <Input focusBorderColor="#464646" type="nome" onChange={(e) => setName(e.target.value)} value={name}/>
                 </FormControl>
 
                 <FormControl border="gray">
                   <FormLabel>Mensagem:</FormLabel>
-                  <Input focusBorderColor="#464646" type="mensagem" />
+                  <Input focusBorderColor="#464646" type="mensagem" onChange={(e) => setmensagem(e.target.value)} value={mensagem} />
                 </FormControl>
 
-                <button className={styles.formBtn}>
+                <button type="submit" className={styles.formBtn}>
                   Enviar
                   <LuClipboardList stroke="#FFFFFF" />
                 </button>

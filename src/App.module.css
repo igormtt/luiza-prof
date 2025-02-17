@@ -22,7 +22,7 @@
   justify-content: center;
   align-items: center;
 
-  background-color: #e1dddd;
+  background-color: #fff7f1;
   /* background-color: #f2cda0; */
   color: #fff;
   padding-inline: 8rem;
@@ -34,10 +34,16 @@
   flex-direction: row;
 }
 
-.metodologiaDeEnsino h1,
 .metodologiaDeEnsino p {
-  /* color: #484848; */
-  color: #2c221a;
+  color: #766350;
+}
+
+.metodologiaDesc h3 {
+  color: #4D3B24;
+}
+
+.metodologiaDesc strong {
+  color: #4D3B24;
 }
 
 .metodologiaIMG {
@@ -58,6 +64,7 @@
 
 .title > h1 {
   font-size: 46px;
+  color: #4D3B24;
 }
 
 .desc1 {
@@ -92,7 +99,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #e6e6e6;
+  background-color: #f0e9e3;
   height: auto;
 }
 
@@ -105,7 +112,7 @@
 
 .childrenPogress h1,
 .childrenPogress h2 {
-  color: #3e3e3e;
+  color:#4D3B24;
 }
 
 .childrenProgressTitle {
@@ -114,6 +121,7 @@
 
 .childrenProgressTitle > h1 {
   font-size: 40px;
+  color:#4D3B24;
 }
 
 .childrenProgressText {
@@ -123,6 +131,11 @@
   text-align: justify;
   justify-content: flex-end;
   font-weight: 400;
+}
+
+.childrenProgressText p {
+  color: #766350;
+  font-weight: 500;
 }
 
 .childrenProgressImg img {
@@ -161,6 +174,11 @@
   text-align: left;
 }
 
+.checkTexts {
+  color: #766350;
+  font-weight: 500;
+}
+
 .list img{
   width: 42px;
 }
@@ -183,6 +201,10 @@
   display: flex;
 }
 
+.quemSouEu h1 {
+  color:#4D3B24;
+}
+
 .quemSouEuContent {
   display: flex;
   margin-top: 6rem;
@@ -194,6 +216,8 @@
 .quemSouEuContent p {
   width: 60%;
   font-size: 18px;
+  color: #766350;
+  font-weight: 500;
 }
 
 .contactForm {
@@ -212,6 +236,10 @@
   display: flex;
   justify-content: center;
   margin-bottom: 2rem;
+}
+
+.formTitle h1 {
+  color: #4D3B24;
 }
 
 .form {
