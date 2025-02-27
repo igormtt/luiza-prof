@@ -28,7 +28,6 @@ const FadeInSection = ({ children }: { children: ReactNode }) => {
 };
 
 export default function App() {
-
   function sendMessage() {
     const message = `Olá! Me chamo ${name}, vim pelo seu site e gostaria de conversar sobre as aulas!
     \n\n
@@ -46,9 +45,9 @@ export default function App() {
 
   const tela = window.innerWidth;
 
-  const [ name, setName ] = useState("")
-  const [ email, setEmail ] = useState("")
-  const [ mensagem, setmensagem ] = useState("")
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [mensagem, setmensagem] = useState("");
 
   return (
     <>
@@ -65,8 +64,6 @@ export default function App() {
 
         <div className={styles.metodologiaDesc}>
           <div className={styles.desc1}>
-            <h3>Inglês que faz sentido, aprendizado que transforma.</h3>
-
             <p>
               Seu filho vai aprender inglês com um objetivo claro:{" "}
               <strong>se comunicar com confiança no mundo real.</strong> Minhas
@@ -89,7 +86,7 @@ export default function App() {
           </div>
 
           <div className={styles.metodologiaIMG}>
-            <img src="/newcolor.png" alt="Criança estudando" />
+            <img src="/Kids_funny.jpg" alt="Criança estudando" />
           </div>
         </div>
 
@@ -98,11 +95,11 @@ export default function App() {
         <div className={styles.cards}>
           <Card
             modalidade="Modalidade On-Line"
-            descricao="As aulas online estimulam a autonomia da criança desde cedo, além de desenvolver habilidades tecnológicas essenciais para o futuro. Nessa modalidade as aulas são feitas para despertar o interesse natural da criança, são utilizadas músicas, jogos, histórias e outras atividades dinâmicas que tornam o aprendizado divertido e eficaz."
+            descricao="Nessa modalidade as aulas são feitas para despertar o interesse natural dos alunos, estimulando a autonomia e a independência nos estudos. Além disso, contribui para o desenvolvimento de habilidades tecnológicas essenciais para o futuro. Para tornar o ensino mais atrativo e envolvente, são utilizadas diversas ferramentas interativas, como músicas, jogos, histórias, trechos de filmes e séries. Dessa forma, o aprendizado se torna mais dinâmico, prazeroso e eficiente."
           />
           <Card
             modalidade="Modalidade Presencial"
-            descricao="No atendimento presencial, o vínculo emocional e o conforto do lar potencializam o aprendizado, tornando-o mais acolhedor e significativo. Aprender em um ambiente familiar, onde a criança se sente segura, pode aumentar sua confiança e engajamento, criando uma experiência única e significativa."
+            descricao="No atendimento presencial, o vínculo emocional e o ambiente familiar desempenham um papel fundamental no desenvolvimento cognitivo. O conforto do lar potencializa o aprendizado, tornando-o mais acolhedor e significativo. Estudar em um espaço onde o aluno se sente seguro e à vontade fortalece a confiança e o engajamento, proporcionando uma experiência única e transformadora."
           />
         </div>
       </div>
@@ -319,24 +316,31 @@ export default function App() {
 
       {/* QUEM SOU EU  */}
 
-      <div className={styles.quemSouEu}>
+      <div id="hoIam" className={styles.quemSouEu}>
         <div className={styles.quemSouEuTitle}>
           <h1>Quem sou eu?</h1>
         </div>
 
-        <div className={styles.quemSouEuContent}>
-          <p>
-            Oi! Eu sou a professora Luíza, formada em Letras - Licenciatura pela
-            PUCRS e pós-graduada em Metodologias de Ensino, também pela PUCRS.
-            Tenho quase 10 anos de experiência com alfabetização bilíngue e sou
-            apaixonada por descobrir novas formas de tornar o aprendizado mais
-            acessível e prazeroso para cada aluno. Acredito que cada criança
-            aprende de um jeito e no seu próprio tempo. Meu objetivo é criar um
-            ambiente leve e acolhedor, onde elas se sintam seguras para aprender
-            e se desenvolver com confiança. Se você busca um acompanhamento
-            personalizado e feito com carinho, estou aqui para ajudar!
-          </p>
+        <div className={styles.wrapper}>
+          <div className={styles.quemSouEuContent}>
+            <p>
+              Oi! Eu sou a professora Luíza, formada em Letras - Licenciatura pela
+              PUCRS e pós-graduada em Metodologias de Ensino, também pela PUCRS.
+              Tenho quase 10 anos de experiência com alfabetização bilíngue e sou
+              apaixonada por descobrir novas formas de tornar o aprendizado mais
+              acessível e prazeroso para cada aluno. Acredito que cada criança
+              aprende de um jeito e no seu próprio tempo. Meu objetivo é criar um
+              ambiente leve e acolhedor, onde elas se sintam seguras para aprender
+              e se desenvolver com confiança. Se você busca um acompanhamento
+              personalizado e feito com carinho, estou aqui para ajudar!
+            </p>
+          </div>
+
+          <div className={styles.photo}>
+              <img src="/Sobre.jpeg" alt="" />
+          </div>
         </div>
+
       </div>
 
       {/* FORMULARIO PARA CONTATO */}
@@ -351,16 +355,31 @@ export default function App() {
             <div className={styles.form}>
               <FormControl className="formControl" border="gray">
                 <FormLabel>Email:</FormLabel>
-                <Input focusBorderColor="#464646" type="email" onChange={(e) => setEmail(e.target.value)} value={email}/>
+                <Input
+                  focusBorderColor="#464646"
+                  type="email"
+                  onChange={(e) => setEmail(e.target.value)}
+                  value={email}
+                />
 
                 <FormControl border="gray">
                   <FormLabel>Nome:</FormLabel>
-                  <Input focusBorderColor="#464646" type="nome" onChange={(e) => setName(e.target.value)} value={name}/>
+                  <Input
+                    focusBorderColor="#464646"
+                    type="nome"
+                    onChange={(e) => setName(e.target.value)}
+                    value={name}
+                  />
                 </FormControl>
 
                 <FormControl border="gray">
                   <FormLabel>Mensagem:</FormLabel>
-                  <Input focusBorderColor="#464646" type="mensagem" onChange={(e) => setmensagem(e.target.value)} value={mensagem} />
+                  <Input
+                    focusBorderColor="#464646"
+                    type="mensagem"
+                    onChange={(e) => setmensagem(e.target.value)}
+                    value={mensagem}
+                  />
                 </FormControl>
 
                 <button type="submit" className={styles.formBtn}>
